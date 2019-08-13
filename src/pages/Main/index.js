@@ -27,6 +27,7 @@ export default function Main({ match }) {
   }, [match.params.id]);
 
   useEffect(() => {
+    // rota websocket
     const socket = io("http://localhost:3333", {
       query: { user: match.params.id }
     });
